@@ -1,0 +1,126 @@
+<html xmlns:th="http://www.thymeleaf.org" lang="en">
+<head lang="en">
+    <th:block th:include="include :: header('出入库')"/>
+</head>
+<body>
+<!-- Side Navbar -->
+<nav class="side-navbar">
+    <th:block th:include="include :: sideNavBar('6')"/>
+</nav>
+<div class="page">
+    <header class="header">
+        <th:block th:include="include :: topNavBar"/>
+    </header>
+    <!-- Breadcrumb-->
+    <div class="breadcrumb-holder">
+        <div class="container-fluid">
+            <ul class="breadcrumb">
+                <li class="breadcrumb-item"><a th:href="@{/index}">首页</a></li>
+                <li class="breadcrumb-item"><a th:href="@{/sheet/dlvr}">出库单管理</a></li>
+                <li class="breadcrumb-item active">添加出库单</li>
+            </ul>
+        </div>
+    </div>
+    <section class="forms">
+        <div class="container-fluid">
+            <!-- Page Header-->
+            <header>
+                <a class="btn btn-primary text-white" th:href="@{/sheet/dlvr/update}">修改出库单 </a>
+                <a class="btn btn-primary text-white" th:href="@{/sheet/dlvr}">所有出库单 </a>
+            </header>
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="card">
+                        <div class="card-header d-flex align-items-center">
+                            <h4>填写出库单</h4>
+                        </div>
+                        <div class="card-body">
+                            <form class="form-horizontal">
+                                <div class="form-group row">
+                                    <label class="col-sm-2 form-control-label">选择源仓库</label>
+                                    <div class="col-sm-10 mb-3">
+                                        <select name="repoId" class="form-control">
+                                            <option th:each="repo:${repoPositions}" th:id="'opt'+${repo.id}"
+                                                    th:value="${repo.position}"
+                                                    th:text="${repo.position}"></option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="line"></div>
+                                <div class="form-group row">
+                                    <label class="col-sm-2 form-control-label">选择负责人</label>
+                                    <div class="col-sm-10 mb-3">
+                                        <select name="contact" class="form-control">
+                                            <option th:each="user:${users}" th:id="'opt'+${user.phone}"
+                                                    th:text="${user.username}+'-'+ ${user.phone}"
+                                                    th:value="${user.phone}"></option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="line"></div>
+                                <div class="form-group row">
+                                    <label class="col-lg-2 form-control-label">状态</label>
+                                    <div class="col-lg-10">
+                                        <input type="text" name="status" value="0" disabled="" placeholder="默认为0"
+                                               class="form-control">
+                                        <span class="text-small text-gray help-block-none">0:订单创建 1:拣货完成 2:关闭回传 3:订单取消</span>
+                                    </div>
+                                </div>
+                                <div class="line"></div>
+                                <div class="form-group row">
+                                    <label class="col-sm-2 form-control-label">目的地</label>
+                                    <div class="col-sm-10">
+                                        <input type="text" name="destination" class="form-control">
+                                    </div>
+                                </div>
+                                <div class="line"></div>
+                                <div class="form-group row">
+                                    <label class="col-sm-2 form-control-label">备注</label>
+                                    <div class="col-sm-10">
+                                        <input type="text" name="note" placeholder="可为空" class="form-control">
+                                    </div>
+                                </div>
+                                <div class="line"></div>
+                                <div class="form-group row">
+                                    <label class="col-lg-2 form-control-label">创建时间</label>
+                                    <div class="col-lg-10">
+                                        <input name="createtime"
+                                               disabled=""
+                                               th:value="${#calendars.format(new java.util.Date().getTime(),'yyyy/MM/dd HH:mm')}"
+                                               class="form-control">
+                                        <span class="text-small text-gray help-block-none">默认为当前时间</span>
+                                    </div>
+                                </div>
+                                <div class="line"></div>
+                                <div class="form-group row">
+                                    <label class="col-lg-2 form-control-label">完成时间</label>
+                                    <div class="col-lg-10">
+                                        <input type="date" name="closetime" value="" disabled=""
+                                               class="form-control">
+                                        <span class="text-small text-gray help-block-none">不可操作</span>
+                                    </div>
+                                </div>
+                                <div class="line"></div>
+                                <div class="form-group row">
+                                    <div class="col-sm-4 offset-sm-2">
+                                        <button class="btn btn-secondary">取消</button>
+                                        <button id="submit-add-dlvr" class="btn btn-primary">创建出货单</button>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <footer class="main-footer">
+        <th:block th:include="include ::footer"/>
+    </footer>
+</div>
+<th:block th:include="include::scripts"/>
+<script>
+    Dlvr.init();
+</script>
+</body>
+</html>
