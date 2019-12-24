@@ -24,96 +24,32 @@
         <div class="container-fluid">
             <header>
                 <a class="btn btn-primary text-white" th:href="@{/storage/repo}">按库区查看 </a>
-                <a class="btn btn-primary text-white" th:href="@{/storage/good}">按货品查看 </a>
             </header>
             <div class="row">
                 <div class="col-lg-12">
                     <div class="card">
                         <div id="headline" class="card-header d-flex align-items-center">
-                            <h4 th:text="${session.chooseByRepo}?'按库区查看':'按货品查看'">按库区查看</h4>
+                            <h4>按货品查看</h4>
                         </div>
                         <div class="card-body">
                             <form class="form-horizontal">
                                 <div class="form-group row">
-                                    <label class="col-sm-2 form-control-label" th:text="${session.chooseByGood}?'选择货品':'选择库区'">选择库区</label>
+                                    <label class="col-sm-2 form-control-label">选择货品</label>
                                     <div class="col-sm-10 mb-3">
                                         <div class="input-group">
-                                            <select th:name="${session.chooseByGood}?'name':'position'" class="form-control" id="select">
-                                                <option th:if="${session.chooseByGood}" th:each="good:${session.goods}" th:id="'opt'+${good.id}"
-                                                        th:selected="(${#httpServletRequest.getParameter('name')}==${good.name})"  th:value="${good.name}"
+                                            <select class="form-control" id="select" name="name">
+                                                <option th:each="good:${goods}" th:id="'opt'+${good.id}"
+                                                        th:selected="(${#httpServletRequest.getParameter('name')}==${good.name})"
+                                                        th:value="${good.name}"
                                                         th:text="${good.name}"></option>
-                                                <option th:if="${session.chooseByRepo}" th:each="repo:${session.repos}" th:id="'opt'+${repo.id}"
-                                                        th:selected="(${#httpServletRequest.getParameter('position')}==${repo.position})" th:value="${repo.position}"
-                                                        th:text="${repo.position}"></option>
                                             </select>
                                             <div class="input-group-prepend">
-                                                <button id="submit-position" class="btn btn-primary">Go!</button>
+                                                <button class="btn btn-primary" id="submit-position" type="button">Go!
+                                                </button>
                                             </div>
                                         </div>
                                     </div>
 
-                                    <div class="col-lg-4 col-md-6">
-                                         <div class="card project-progress">
-                                            <h2 class="display h4" th:text="${session.chooseByGood}?'库区分布比':'商品库存比'">商品库存比</h2>
-                                            <div class="pie-chart">
-                                                <canvas id="pieChart" width="300" height="300"></canvas>
-                                            </div>
-                                        </div>
-                                    </div>
-
-                                    <div class="col-lg-8 col-md-6">
-                                        <div class="table-responsive">
-                                            <table class="table table-striped table-hover"
-                                                   th:if="${session.chooseByRepo}">
-                                                <thead>
-                                                <tr>
-                                                    <th>#</th>
-                                                    <th th:text="${session.chooseByRepo}?'商品名称':'存放仓库'">存放仓库</th>
-                                                    <th>合格品</th>
-                                                    <th>次品</th>
-                                                    <th>总量</th>
-                                                    <th>操作</th>
-                                                </tr>
-                                                </thead>
-                                                <tbody>
-                                                <tr th:if="${session.chooseByRepo}" th:each="storage,iterStat:${session.storageByRepo}"
-                                                    th:id="'storage'+${iterStat.count}">
-                                                    <th scope="row" th:text="${iterStat.count}"></th>
-                                                    <td th:text="${storage.good.name}"></td>
-                                                    <td th:text="${storage.qualified}"></td>
-                                                    <td th:text="${storage.count} - ${storage.qualified}"></td>
-                                                    <td th:text="${storage.count}"></td>
-                                                    <td>
-                                                        <a class="btn btn-secondary text-white text-center" th:text="修改"
-                                                           th:onclick="fillForm([[${storage}]])"
-                                                           th:id="'btn-update-repo'+${iterStat.count}">
-                                                        </a>
-                                                        <a class="btn btn-danger text-white text-center" th:text="删除"
-                                                           th:onclick="deleteGoodInRepo([[${storage.good.id}]])">
-                                                        </a>
-                                                    </td>
-                                                </tr>
-                                                <tr th:if="${session.chooseByGood}" th:each="storage,iterStat:${session.storageByGood}"
-                                                    th:id="'storage'+${iterStat.count}">
-                                                    <th scope="row" th:text="${iterStat.count}"></th>
-                                                    <td th:text="${storage.repo.position}"></td>
-                                                    <td th:text="${storage.qualified}"></td>
-                                                    <td th:text="${storage.count} - ${storage.qualified}"></td>
-                                                    <td th:text="${storage.count}"></td>
-                                                    <td>
-                                                        <a class="btn btn-secondary text-white text-center" th:text="修改"
-                                                           th:onclick="fillForm([[${storage}]])"
-                                                           th:id="'btn-update-repo'+${iterStat.count}">
-                                                        </a>
-                                                        <a class="btn btn-danger text-white text-center" th:text="删除"
-                                                           th:onclick="deleteGoodInRepo([[${storage.good.id}]])">
-                                                        </a>
-                                                    </td>
-                                                </tr>
-                                                </tbody>
-                                            </table>
-                                        </div>
-                                    </div>
                                 </div>
                             </form>
                         </div>
@@ -128,86 +64,8 @@
 </div>
 <th:block th:include="include::scripts"/>
 <script>
-    RepoStorage.init();
-
-    function deleteGoodInRepo(gid) {
-        RepoStorage.deleteGoodInRepo(gid)
-    }
-
-    function fillForm(repo) {
-        Repo.showUpdateRepoForm();
-        Repo.fillInForm(repo);
-    }
+    GoodStorage.init();
 </script>
 
-<script th:inline="javascript">
-    /*<![CDATA[*/
-    var chooseByRepo = [[${session.chooseByRepo}]];
-    if (chooseByRepo){
-        var storages = [[${session.storageByRepo}]];
-        var names = [];
-        var counts = [];
-        for (let i = 0; i < storages.length; i++) {
-            names[i] =  storages[i].good.name;
-            counts[i] = storages[i].count;
-        }
-        var pieChartExample = new Chart($('#pieChart'), {
-            type: 'doughnut',
-            data: {
-                labels: names,
-                datasets: [
-                    {
-                        data: counts,
-                        borderWidth: [1, 1, 1],
-                        backgroundColor: [
-                            'rgba(51, 179, 90, 1)',
-                            "rgba(75,192,192,1)",
-                            "#FFCE56"
-                        ],
-                        hoverBackgroundColor: [
-                            'rgba(51, 179, 90, 1)',
-                            "rgba(75,192,192,1)",
-                            "#FFCE56"
-                        ]
-                    }]
-            },
-            responsive: true
-        });
-
-    }
-    else{
-        var storages = [[${session.storageByGood}]];
-        var positions = [];
-        var counts = [];
-        for (let i = 0; i < storages.length; i++) {
-            positions[i] =  storages[i].repo.position;
-            counts[i] = storages[i].count;
-        }
-        var pieChartExample = new Chart($('#pieChart'), {
-            type: 'doughnut',
-            data: {
-                labels: positions,
-                datasets: [
-                    {
-                        data: counts,
-                        borderWidth: [1, 1, 1],
-                        backgroundColor: [
-                            'rgba(51, 179, 90, 1)',
-                            "rgba(75,192,192,1)",
-                            "#FFCE56"
-                        ],
-                        hoverBackgroundColor: [
-                            'rgba(51, 179, 90, 1)',
-                            "rgba(75,192,192,1)",
-                            "#FFCE56"
-                        ]
-                    }]
-            },
-            responsive: true
-        });
-    }
-    /*]]>*/
-
-</script>
 </body>
 </html>

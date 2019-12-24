@@ -10,10 +10,11 @@ import lombok.*;
 @NoArgsConstructor
 @AllArgsConstructor
 @ToString
-public class Good {
-    private int id;
-    private String origin;
-    private String name;
-    private float price;
+public class Storage {
+    private int gid;
+    private Good good;
+    private Repo repo;
     private int repoId;
+    private int count;
+    private int qualified;
 }

@@ -1500,27 +1500,28 @@ and dependencies (minified).
 					e.preventDefault();
 				}
 				if(e.deltaFactor<5 && !o.mouseWheel.normalizeDelta){
-					//very low deltaFactor values mean some kind of delta acceleration (e.g. osx trackpad), so adjusting scrolling accordingly
-					amount=e.deltaFactor; dur=17;
-				}
-				_scrollTo($this,(contentPos-(dlt*amount)).toString(),{dir:dir,dur:dur});
-			}
-		},
-		/* -------------------- */
-		
-		
-		/* checks if iframe can be accessed */
-		_canAccessIFrameCache=new Object(),
-		_canAccessIFrame=function(iframe){
-		    var result=false,cacheKey=false,html=null;
-		    if(iframe===undefined){
-				cacheKey="#empty";
-		    }else if($(iframe).attr("id")!==undefined){
-				cacheKey=$(iframe).attr("id");
-		    }
-			if(cacheKey!==false && _canAccessIFrameCache[cacheKey]!==undefined){
-				return _canAccessIFrameCache[cacheKey];
-			}
+                    //very low deltaFactor values mean some kind of delta acceleration (e.g. osx trackpad), so adjusting scrolling accordingly
+                    amount = e.deltaFactor;
+                    dur = 17;
+                }
+                _scrollTo($this, (contentPos - (dlt * amount)).toString(), {dir: dir, dur: dur});
+            }
+        },
+        /* -------------------- */
+
+
+        /* checks if iframe can be accessed */
+        _canAccessIFrameCache = {},
+        _canAccessIFrame = function (iframe) {
+            var result = false, cacheKey = false, html = null;
+            if (iframe === undefined) {
+                cacheKey = "#empty";
+            } else if ($(iframe).attr("id") !== undefined) {
+                cacheKey = $(iframe).attr("id");
+            }
+            if (cacheKey !== false && _canAccessIFrameCache[cacheKey] !== undefined) {
+                return _canAccessIFrameCache[cacheKey];
+            }
 			if(!iframe){
 				try{
 					var doc=top.document;

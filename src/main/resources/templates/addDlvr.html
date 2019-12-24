@@ -16,7 +16,8 @@
         <div class="container-fluid">
             <ul class="breadcrumb">
                 <li class="breadcrumb-item"><a th:href="@{/index}">首页</a></li>
-                <li class="breadcrumb-item active">出库单管理</li>
+                <li class="breadcrumb-item"><a th:href="@{/sheet/dlvr}">出库单管理</a></li>
+                <li class="breadcrumb-item active">添加出库单</li>
             </ul>
         </div>
     </div>
@@ -24,9 +25,8 @@
         <div class="container-fluid">
             <!-- Page Header-->
             <header>
-                <a class="btn btn-primary text-white" th:href="@{/sheet/dlvr/add}">填写出库单 </a>
                 <a class="btn btn-primary text-white" th:href="@{/sheet/dlvr/update}">修改出库单 </a>
-                <a class="btn btn-primary text-white" th:href="@{/sheet/dlvr/list}">所有出库单 </a>
+                <a class="btn btn-primary text-white" th:href="@{/sheet/dlvr}">所有出库单 </a>
             </header>
             <div class="row">
                 <div class="col-lg-12">
@@ -41,7 +41,7 @@
                                     <div class="col-sm-10 mb-3">
                                         <select name="repoId" class="form-control">
                                             <option th:each="repo:${repoPositions}" th:id="'opt'+${repo.id}"
-                                                    th:value="${repo.position}"
+                                                    th:value="${repo.id}"
                                                     th:text="${repo.position}"></option>
                                         </select>
                                     </div>
@@ -84,74 +84,28 @@
                                 <div class="form-group row">
                                     <label class="col-lg-2 form-control-label">创建时间</label>
                                     <div class="col-lg-10">
-                                        <input type="date" name="createtime" value="0" disabled="" placeholder="默认今天"
+                                        <input disabled=""
+                                               name="createtime"
+                                               th:value="${#calendars.format(new java.util.Date().getTime(),'yyyy/MM/dd HH:mm')}"
                                                class="form-control">
+                                        <span class="text-small text-gray help-block-none">默认为当前时间</span>
                                     </div>
                                 </div>
                                 <div class="line"></div>
                                 <div class="form-group row">
                                     <label class="col-lg-2 form-control-label">完成时间</label>
                                     <div class="col-lg-10">
-                                        <input type="date" name="closetime" value="0" disabled="" placeholder="不可操作"
+                                        <input disabled="" name="closetime" type="date" value=""
                                                class="form-control">
-                                    </div>
-                                </div>
-                                <div class="line"></div>
-
-
-                                <div class="form-group row">
-                                    <label class="col-sm-2 form-control-label">Input groups</label>
-                                    <div class="col-sm-10">
-                                        <div class="form-group">
-                                            <div class="input-group">
-                                                <div class="input-group-prepend"><span class="input-group-text">@</span>
-                                                </div>
-                                                <input type="text" placeholder="Username" class="form-control">
-                                            </div>
-                                        </div>
-                                        <div class="form-group">
-                                            <div class="input-group">
-                                                <input type="text" class="form-control">
-                                                <div class="input-group-append"><span
-                                                        class="input-group-text">.00</span></div>
-                                            </div>
-                                        </div>
-                                        <div class="form-group">
-                                            <div class="input-group">
-                                                <div class="input-group-prepend"><span class="input-group-text">$</span>
-                                                </div>
-                                                <input type="text" class="form-control">
-                                                <div class="input-group-append"><span
-                                                        class="input-group-text">.00</span></div>
-                                            </div>
-                                        </div>
-                                        <div class="form-group">
-                                            <div class="input-group">
-                                                <div class="input-group-prepend">
-                                                    <div class="input-group-text">
-                                                        <input type="checkbox">
-                                                    </div>
-                                                </div>
-                                                <input type="text" class="form-control">
-                                            </div>
-                                        </div>
-                                        <div class="form-group">
-                                            <div class="input-group">
-                                                <div class="input-group-prepend">
-                                                    <div class="input-group-text">
-                                                        <input type="radio">
-                                                    </div>
-                                                </div>
-                                                <input type="text" class="form-control">
-                                            </div>
-                                        </div>
+                                        <span class="text-small text-gray help-block-none">不可操作</span>
                                     </div>
                                 </div>
                                 <div class="line"></div>
                                 <div class="form-group row">
                                     <div class="col-sm-4 offset-sm-2">
                                         <button class="btn btn-secondary">取消</button>
-                                        <button class="btn btn-primary">创建出货单</button>
+                                        <button class="btn btn-primary" id="submit-add-dlvr" type="button">创建出货单
+                                        </button>
                                     </div>
                                 </div>
                             </form>
@@ -166,5 +120,8 @@
     </footer>
 </div>
 <th:block th:include="include::scripts"/>
+<script>
+    Dlvr.init();
+</script>
 </body>
 </html>

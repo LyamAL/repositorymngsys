@@ -7,33 +7,33 @@ import java.util.Map;
  * @author ZAQ
  */
 
-public enum EntryStatus {
-    订单创建(0),
-    部分完成(1),
-    入库完成(2),
-    订单取消(3);
+public enum DeliveryStatus {
+    订单创建((short) 0),
+    拣货完成((short) 1),
+    关闭回传((short) 2),
+    订单取消((short) 3);
 
-    private static Map<Integer, EntryStatus> map = new HashMap<>();
+    private static Map<Short, DeliveryStatus> map = new HashMap<>();
 
     static {
-        for (EntryStatus entryStatus : EntryStatus.values()) {
+        for (DeliveryStatus entryStatus : DeliveryStatus.values()) {
             map.put(entryStatus.value, entryStatus);
         }
     }
 
-    private int value;
+    private Short value;
 
 
-    EntryStatus(int value) {
+    DeliveryStatus(Short value) {
         this.value = value;
     }
 
-    public static EntryStatus valueOf(int val) {
+    public static DeliveryStatus valueOf(Short val) {
         return map.get(val);
     }
 
-    public int getValue() {
+    public Short getValue() {
         return value;
     }
 
-    }
+}

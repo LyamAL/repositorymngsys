@@ -1,0 +1,157 @@
+<html xmlns:th="http://www.thymeleaf.org" lang="en">
+<head lang="en">
+    <th:block th:include="include :: header('出入库')"/>
+</head>
+<body>
+<!-- Side Navbar -->
+<nav class="side-navbar">
+    <th:block th:include="include :: sideNavBar('6')"/>
+</nav>
+<div class="page">
+    <header class="header">
+        <th:block th:include="include :: topNavBar"/>
+    </header>
+    <!-- Breadcrumb-->
+    <div class="breadcrumb-holder">
+        <div class="container-fluid">
+            <ul class="breadcrumb">
+                <li class="breadcrumb-item"><a th:href="@{/index}">首页</a></li>
+                <li class="breadcrumb-item"><a th:href="@{/sheet/dlvr}">出库单管理</a></li>
+                <li class="breadcrumb-item active">查看/修改出库单</li>
+            </ul>
+        </div>
+    </div>
+    <section class="forms">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="card">
+                        <div class="card-header d-flex align-items-center">
+                            <h4>查看/修改</h4>
+                        </div>
+                        <div class="card-body">
+                            <form class="form-horizontal">
+                                <div class="form-group row">
+                                    <label class="col-sm-2 form-control-label">源仓库</label>
+                                    <div class="col-sm-10">
+                                        <input type="text" disabled="" th:value="${dlvrSheet.repoId.position}" class="form-control">
+                                        <span class="text-small text-gray help-block-none">不支持修改</span>
+                                    </div>
+                                </div>
+                                <div class="line"></div>
+                                <div class="form-group row">
+                                    <label class="col-sm-2 form-control-label">负责人</label>
+                                    <div class="col-sm-10 mb-3">
+                                        <select name="contact" class="form-control">
+                                            <option th:each="user:${users}" th:selected="(${user.phone}==${dlvrSheet.contact})"
+                                                    th:text="${user.username}+'-'+ ${user.phone}"
+                                                    th:value="${user.phone}"></option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="line"></div>
+                                <div class="form-group row">
+                                    <label class="col-lg-2 form-control-label">状态</label>
+                                    <div class="col-lg-10">
+                                        <input type="text" name="deliveryStatus" th:value="${dlvrSheet.deliveryStatus}"
+                                               class="form-control" th:placeholder="${dlvrSheet.deliveryStatus}">
+                                        <span class="text-small text-gray help-block-none">0:订单创建 1:拣货完成 2:关闭回传 3:订单取消</span>
+                                    </div>
+                                </div>
+                                <div class="line"></div>
+                                <div class="form-group row">
+                                    <label class="col-sm-2 form-control-label">目的地</label>
+                                    <div class="col-sm-10">
+                                        <input type="text" name="destination" th:value="${dlvrSheet.destination}" class="form-control">
+                                    </div>
+                                </div>
+                                <div class="line"></div>
+                                <div class="form-group row">
+                                    <label class="col-sm-2 form-control-label">备注</label>
+                                    <div class="col-sm-10">
+                                        <input id = "update-sheet-note" type="text" name="note" th:value="${dlvrSheet.note}" class="form-control">
+                                    </div>
+                                </div>
+                                <div class="line"></div>
+                                <div class="form-group row">
+                                    <label class="col-lg-2 form-control-label">创建时间</label>
+                                    <div class="col-lg-10">
+                                        <input name="createTime" disabled="disabled"
+                                               th:value="${#dates.format(dlvrSheet.createTime,'yyyy/MM/dd HH:mm')}"
+                                               class="form-control">
+                                        <span class="text-small text-gray help-block-none">不允许修改</span>
+                                    </div>
+                                </div>
+                                <div class="line"></div>
+                                <div class="form-group row">
+                                    <label class="col-lg-2 form-control-label">完成时间</label>
+                                    <div class="col-lg-10">
+                                        <input name="closeTime" th:value="${#dates.format(dlvrSheet.closeTime,'yyyy-MM-dd')}"
+                                               class="form-control">
+                                        <span class="text-small text-gray help-block-none">修改请遵循格式 eg.2019-12-13</span>
+                                        <span class="text-small text-gray help-block-none">状态为关闭回传/订单取消时有效</span>
+                                    </div>
+                                </div>
+                                <div class="line"></div>
+                                <div class="form-group row">
+                                    <div class="col-sm-4 offset-sm-2">
+                                        <button type="button" th:onclick="updateSheet([[${dlvrSheet.id}]])" class="btn btn-primary">提交修改</button>
+                                    </div>
+                                </div>
+
+                                <div class="text-dark text-center" th:if="${#lists.isEmpty(goodsInDlvr)}">出货单上暂无货物</div>
+                                <div class="table-responsive" th:if="${not #lists.isEmpty(goodsInDlvr)}">
+                                    <table class="table">
+                                        <thead>
+                                        <tr>
+                                            <th>#</th>
+                                            <th>货品名称</th>
+                                            <th>单价</th>
+                                            <th>出货量</th>
+                                            <th>总价</th>
+                                            <th>备注</th>
+                                            <th>操作</th>
+                                        </tr>
+                                        </thead>
+                                        <tbody>
+                                        <tr th:each="good,stat:${goodsInDlvr}">
+                                            <th scope="row">[[${stat.count}]]</th>
+                                            <input th:value="${good.good.id}" type="hidden" name="gid">
+                                            <td th:text="${good.good.name}"></td>
+                                            <td><input th:value="${good.price}" type="number" name="price"></td>
+                                            <td><input type="number" th:value="${good.count}" name="count"></td>
+                                            <td><input type="number" th:value="${good.count * good.price}" name="sum"></td>
+                                            <td><input type="text" id="update-goods-note" name="note" th:value="${good.note}"></td>
+                                            <td>
+                                                <button type="button" th:onclick="updateGoods([[${good.good.id}]], [[${dlvrSheet.id}]])" class="btn btn-secondary text-white text-center" th:text="|修改|"></button>
+                                                <a th:onclick="removeGoods([[${good.good.id}]],[[${dlvrSheet.id}]])" class="btn btn-danger text-white text-center" th:text="删除"></a>
+                                            </td>
+                                        </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <footer class="main-footer">
+        <th:block th:include="include ::footer"/>
+    </footer>
+</div>
+<th:block th:include="include::scripts"/>
+<script>
+    function updateGoods(gid, deliveryId) {
+        DlvrGoods.updateGoodsOnSheet(gid,deliveryId);
+    }
+    function removeGoods(gid,sheetId){
+        DlvrGoods.deleteGoodsOnSheet(gid,sheetId);
+    }
+    function updateSheet(sheetId){
+        DlvrGoods.updateSheet(sheetId);
+    }
+</script>
+</body>
+</html>

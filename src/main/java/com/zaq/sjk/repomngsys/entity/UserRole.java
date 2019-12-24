@@ -3,8 +3,7 @@ package com.zaq.sjk.repomngsys.entity;
 /**
  * @author ZAQ
  */
-public class Role{
-    private int id;
-    private String title;
-    private String description;
+public class UserRole {
+    private String rid;
+    private String uPhone;
 }

@@ -5,7 +5,7 @@
 <body>
 <!-- Side Navbar -->
 <nav class="side-navbar">
-    <th:block th:include="include :: sideNavBar('6')"/>
+    <th:block th:include="include :: sideNavBar('7')"/>
 </nav>
 <div class="page">
     <header class="header">
@@ -16,9 +16,9 @@
         <div class="container-fluid">
             <ul class="breadcrumb">
                 <li class="breadcrumb-item"><a th:href="@{/index}">首页</a></li>
-                <li class="breadcrumb-item"><a th:href="@{/sheet/dlvr}">出库单管理</a></li>
-                <li class="breadcrumb-item"><a th:href="@{/sheet/dlvr/add}">添加出库单</a></li>
-                <li class="breadcrumb-item active">添加出库货品</li>
+                <li class="breadcrumb-item"><a th:href="@{/sheet/entr}">入库单管理</a></li>
+                <li class="breadcrumb-item"><a th:href="@{/sheet/entr/add}">添加入库单</a></li>
+                <li class="breadcrumb-item active">添加入库货品</li>
             </ul>
         </div>
     </div>
@@ -28,47 +28,47 @@
                 <div class="col-lg-12">
                     <div class="card">
                         <div class="card-header d-flex align-items-center">
-                            <h4>添加出库货品</h4>
+                            <h4>添加入库货品(新货品请先<a style="link: #9933ff" th:href="@{/good}">点我</a>添加)</h4>
                         </div>
                         <div class="card-body">
-
                             <form class="form-horizontal">
-                                <input th:value="${repo.id}" name="repoId" type="hidden">
-                                <input th:value="${id}" name="deliveryId" type="hidden">
+                                <input name="entryId" th:value="${id}" type="hidden">
                                 <div class="table-responsive">
-                                    <table class="table" th:if="${not #lists.isEmpty(goodsInRepo)}">
+                                    <table class="table">
                                         <thead>
                                         <tr>
                                             <th>#</th>
                                             <th>货品名称</th>
                                             <th>单价</th>
-                                            <th>出货量</th>
+                                            <th>数量</th>
+                                            <th>合格品</th>
                                             <th>备注</th>
                                             <th>是否添加</th>
                                         </tr>
                                         </thead>
                                         <tbody>
-                                        <tr th:each="good,stat:${goodsInRepo}">
+                                        <tr th:each="good,stat:${goods}">
                                             <th scope="row">[[${stat.count}]]</th>
                                             <input th:value="${good.id}" type="hidden" name="gid">
                                             <td th:text="${good.name}"></td>
                                             <td><input th:value="${good.price}" type="number" name="price"></td>
                                             <td><input type="number" name="count"></td>
+                                            <td><input name="qualified" type="number"></td>
                                             <td><input type="text" name="note"></td>
                                             <td>
                                                 <label class="checkbox-inline">
-                                                    <input type="checkbox" value="0" name="add">
+                                                    <input name="add" th:value="${good.id}" type="checkbox">
                                                 </label>
                                             </td>
                                         </tr>
                                         </tbody>
                                     </table>
                                 </div>
-                                <div class="text-dark text-center" th:if="${#lists.isEmpty(goodsInRepo)}">该库区空空如也</div>
                                 <div class="form-group row">
                                     <div class="col-sm-4 offset-sm-2">
-                                        <a th:href="@{/sheet/dlvr}" class="btn btn-secondary">取消</a>
-                                        <button th:if="${not #lists.isEmpty(goodsInRepo)}" id="submit-add-dlvr-good" class="btn btn-primary" type="button">添加发货品</button>
+                                        <a class="btn btn-secondary" th:href="@{/sheet/entr}">取消</a>
+                                        <button class="btn btn-primary" id="submit-add-entr-good" type="button">添加入库货品
+                                        </button>
                                     </div>
                                 </div>
                             </form>
@@ -84,7 +84,7 @@
 </div>
 <th:block th:include="include::scripts"/>
 <script>
-    DlvrGoods.init();
+    EntrGoods.init();
 </script>
 </body>
 </html>

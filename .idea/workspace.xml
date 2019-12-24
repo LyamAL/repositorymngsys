@@ -1,14 +1,443 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="AnalysisUIOptions">
+    <option name="ANALYZE_TEST_SOURCES" value="false" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="6bb9aea2-4d5d-4911-83a1-fbda5b4e7e71" name="Default Changelist" comment="完成">
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/zaq/sjk/repomngsys/entity/RoleTitle.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/repomngsys.sql" beforeDir="false" afterPath="$PROJECT_DIR$/repomngsys.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/zaq/sjk/repomngsys/AppConfiguration.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/zaq/sjk/repomngsys/AppConfiguration.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/zaq/sjk/repomngsys/RepositoryMngSysApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/zaq/sjk/repomngsys/RepositoryMngSysApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/zaq/sjk/repomngsys/config/JsonUsernamePasswordAuthenticationFilter.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/zaq/sjk/repomngsys/config/MyAccessDecisionManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/zaq/sjk/repomngsys/config/MyAccessDecisionManager.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/zaq/sjk/repomngsys/config/MyAuthenticationFailureHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/zaq/sjk/repomngsys/config/MyAuthenticationFailureHandler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/zaq/sjk/repomngsys/config/MyAuthenticationSuccessHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/zaq/sjk/repomngsys/config/MyAuthenticationSuccessHandler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/zaq/sjk/repomngsys/controller/DeliveryController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/zaq/sjk/repomngsys/controller/DeliveryController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/zaq/sjk/repomngsys/controller/EntryController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/zaq/sjk/repomngsys/controller/EntryController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/zaq/sjk/repomngsys/controller/GoodController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/zaq/sjk/repomngsys/controller/GoodController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/zaq/sjk/repomngsys/controller/IndexController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/zaq/sjk/repomngsys/controller/IndexController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/zaq/sjk/repomngsys/controller/RepositoryController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/zaq/sjk/repomngsys/controller/RepositoryController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/zaq/sjk/repomngsys/controller/StorageController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/zaq/sjk/repomngsys/controller/StorageController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/zaq/sjk/repomngsys/controller/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/zaq/sjk/repomngsys/controller/UserController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/zaq/sjk/repomngsys/entity/DeliveryGoods.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/zaq/sjk/repomngsys/entity/DeliveryGoods.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/zaq/sjk/repomngsys/entity/DeliverySheet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/zaq/sjk/repomngsys/entity/DeliverySheet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/zaq/sjk/repomngsys/entity/DeliveryStatus.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/zaq/sjk/repomngsys/entity/DeliveryStatus.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/zaq/sjk/repomngsys/entity/EntryGoods.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/zaq/sjk/repomngsys/entity/EntryGoods.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/zaq/sjk/repomngsys/entity/EntrySheet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/zaq/sjk/repomngsys/entity/EntrySheet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/zaq/sjk/repomngsys/entity/EntryStatus.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/zaq/sjk/repomngsys/entity/EntryStatus.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/zaq/sjk/repomngsys/entity/Good.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/zaq/sjk/repomngsys/entity/Good.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/zaq/sjk/repomngsys/entity/GoodDTO.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/zaq/sjk/repomngsys/entity/Repo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/zaq/sjk/repomngsys/entity/Repo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/zaq/sjk/repomngsys/entity/ResponseWrapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/zaq/sjk/repomngsys/entity/Sale.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/zaq/sjk/repomngsys/entity/Role.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/zaq/sjk/repomngsys/entity/Role.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/zaq/sjk/repomngsys/entity/Storage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/zaq/sjk/repomngsys/entity/Storage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/zaq/sjk/repomngsys/entity/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/zaq/sjk/repomngsys/entity/User.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/zaq/sjk/repomngsys/entity/UserDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/zaq/sjk/repomngsys/entity/UserDTO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/zaq/sjk/repomngsys/entity/UserRole.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/zaq/sjk/repomngsys/entity/UserRole.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/zaq/sjk/repomngsys/exception/DuplicatePKException.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/zaq/sjk/repomngsys/exception/DuplicatePKException.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/zaq/sjk/repomngsys/repository/BaseRepository.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/zaq/sjk/repomngsys/repository/DeliveryRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/zaq/sjk/repomngsys/repository/DeliveryRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/zaq/sjk/repomngsys/repository/EntryRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/zaq/sjk/repomngsys/repository/EntryRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/zaq/sjk/repomngsys/repository/GoodRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/zaq/sjk/repomngsys/repository/GoodRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/zaq/sjk/repomngsys/repository/JdbcTemplate.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/zaq/sjk/repomngsys/repository/JdbcTemplate.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/zaq/sjk/repomngsys/repository/RepoRepositoryImpl.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/zaq/sjk/repomngsys/repository/StorageRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/zaq/sjk/repomngsys/repository/StorageRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/zaq/sjk/repomngsys/repository/UserRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/zaq/sjk/repomngsys/repository/UserRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/zaq/sjk/repomngsys/repository/impl/DeliveryRepositoryImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/zaq/sjk/repomngsys/repository/impl/DeliveryRepositoryImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/zaq/sjk/repomngsys/repository/impl/EntryRepositoryImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/zaq/sjk/repomngsys/repository/impl/EntryRepositoryImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/zaq/sjk/repomngsys/repository/impl/GoodRepositoryImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/zaq/sjk/repomngsys/repository/impl/GoodRepositoryImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/zaq/sjk/repomngsys/repository/impl/RepoRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/zaq/sjk/repomngsys/repository/impl/RepoRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/zaq/sjk/repomngsys/repository/impl/RepoRepositoryImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/zaq/sjk/repomngsys/repository/impl/RepoRepositoryImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/zaq/sjk/repomngsys/repository/impl/StorageRepositoryImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/zaq/sjk/repomngsys/repository/impl/StorageRepositoryImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/zaq/sjk/repomngsys/repository/impl/UserRepositoryImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/zaq/sjk/repomngsys/repository/impl/UserRepositoryImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/zaq/sjk/repomngsys/service/DeliveryService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/zaq/sjk/repomngsys/service/DeliveryService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/zaq/sjk/repomngsys/service/EntryService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/zaq/sjk/repomngsys/service/EntryService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/zaq/sjk/repomngsys/service/GoodService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/zaq/sjk/repomngsys/service/GoodService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/zaq/sjk/repomngsys/service/RepoService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/zaq/sjk/repomngsys/service/RepoService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/zaq/sjk/repomngsys/service/StorageService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/zaq/sjk/repomngsys/service/StorageService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/zaq/sjk/repomngsys/service/impl/DeliveryServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/zaq/sjk/repomngsys/service/impl/DeliveryServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/zaq/sjk/repomngsys/service/impl/EntryServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/zaq/sjk/repomngsys/service/impl/EntryServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/zaq/sjk/repomngsys/service/impl/GoodServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/zaq/sjk/repomngsys/service/impl/GoodServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/zaq/sjk/repomngsys/service/impl/RepoServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/zaq/sjk/repomngsys/service/impl/RepoServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/zaq/sjk/repomngsys/service/impl/StorageServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/zaq/sjk/repomngsys/service/impl/StorageServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/zaq/sjk/repomngsys/service/impl/UserServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/zaq/sjk/repomngsys/service/impl/UserServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/zaq/sjk/repomngsys/utils/ConnectionPool.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/zaq/sjk/repomngsys/utils/ConnectionPool.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/zaq/sjk/repomngsys/utils/DBManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/zaq/sjk/repomngsys/utils/DBManager.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/zaq/sjk/repomngsys/utils/RoleTitle.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/zaq/sjk/repomngsys/utils/StringUtil.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/icons-reference/styles.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/icons-reference/styles.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/img/avatar-0.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/img/avatar-1.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/img/avatar-10.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/img/avatar-2.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/img/avatar-3.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/img/avatar-4.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/img/avatar-5.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/img/avatar-6.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/img/avatar-7.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/img/avatar-8.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/img/avatar-9.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/img/flags/16/AD.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/img/flags/16/AE.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/img/flags/16/AF.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/img/flags/16/AG.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/img/flags/16/AI.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/img/flags/16/AL.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/img/flags/16/AM.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/img/flags/16/AN.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/img/flags/16/AO.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/img/flags/16/AQ.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/img/flags/16/AR.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/img/flags/16/AS.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/img/flags/16/AT.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/img/flags/16/AU.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/img/flags/16/AW.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/img/flags/16/AX.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/img/flags/16/AZ.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/img/flags/16/BA.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/img/flags/16/BB.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/img/flags/16/BD.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/img/flags/16/BE.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/img/flags/16/BF.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/img/flags/16/BG.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/img/flags/16/BH.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/img/flags/16/BI.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/img/flags/16/BJ.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/img/flags/16/BL.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/img/flags/16/BM.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/img/flags/16/BN.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/img/flags/16/BO.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/img/flags/16/BR.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/img/flags/16/BS.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/img/flags/16/BT.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/img/flags/16/BW.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/img/flags/16/BY.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/img/flags/16/BZ.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/img/flags/16/CA.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/img/flags/16/CC.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/img/flags/16/CD.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/img/flags/16/CF.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/img/flags/16/CG.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/img/flags/16/CH.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/img/flags/16/CI.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/img/flags/16/CK.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/img/flags/16/CL.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/img/flags/16/CM.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/img/flags/16/CN.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/img/flags/16/CO.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/img/flags/16/CR.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/img/flags/16/CT.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/img/flags/16/CU.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/img/flags/16/CV.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/img/flags/16/CW.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/img/flags/16/CX.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/img/flags/16/CY.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/img/flags/16/CZ.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/img/flags/16/DE.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/img/flags/16/DJ.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/img/flags/16/DK.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/img/flags/16/DM.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/img/flags/16/DO.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/img/flags/16/DZ.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/img/flags/16/EC.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/img/flags/16/EE.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/img/flags/16/EG.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/img/flags/16/EH.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/img/flags/16/ER.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/img/flags/16/ES.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/img/flags/16/ET.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/img/flags/16/EU.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/img/flags/16/FI.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/img/flags/16/FJ.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/img/flags/16/FK.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/img/flags/16/FM.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/img/flags/16/FO.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/img/flags/16/FR.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/img/flags/16/GA.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/img/flags/16/GB.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/img/flags/16/GD.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/img/flags/16/GE.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/img/flags/16/GG.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/img/flags/16/GH.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/img/flags/16/GI.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/img/flags/16/GL.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/img/flags/16/GM.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/img/flags/16/GN.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/img/flags/16/GQ.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/img/flags/16/GR.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/img/flags/16/GS.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/img/flags/16/GT.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/img/flags/16/GU.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/img/flags/16/GW.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/img/flags/16/GY.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/img/flags/16/HK.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/img/flags/16/HN.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/img/flags/16/HR.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/img/flags/16/HT.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/img/flags/16/HU.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/img/flags/16/IC.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/img/flags/16/ID.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/img/flags/16/IE.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/img/flags/16/IL.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/img/flags/16/IM.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/img/flags/16/IN.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/img/flags/16/IQ.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/img/flags/16/IR.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/img/flags/16/IS.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/img/flags/16/IT.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/img/flags/16/JE.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/img/flags/16/JM.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/img/flags/16/JO.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/img/flags/16/JP.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/img/flags/16/KE.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/img/flags/16/KG.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/img/flags/16/KH.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/img/flags/16/KI.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/img/flags/16/KM.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/img/flags/16/KN.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/img/flags/16/KP.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/img/flags/16/KR.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/img/flags/16/KW.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/img/flags/16/KY.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/img/flags/16/KZ.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/img/flags/16/LA.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/img/flags/16/LB.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/img/flags/16/LC.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/img/flags/16/LI.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/img/flags/16/LK.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/img/flags/16/LR.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/img/flags/16/LS.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/img/flags/16/LT.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/img/flags/16/LU.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/img/flags/16/LV.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/img/flags/16/LY.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/img/flags/16/MA.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/img/flags/16/MC.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/img/flags/16/MD.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/img/flags/16/ME.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/img/flags/16/MF.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/img/flags/16/MG.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/img/flags/16/MH.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/img/flags/16/MK.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/img/flags/16/ML.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/img/flags/16/MM.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/img/flags/16/MN.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/img/flags/16/MO.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/img/flags/16/MP.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/img/flags/16/MQ.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/img/flags/16/MR.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/img/flags/16/MS.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/img/flags/16/MT.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/img/flags/16/MU.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/img/flags/16/MV.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/img/flags/16/MW.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/img/flags/16/MX.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/img/flags/16/MY.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/img/flags/16/MZ.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/img/flags/16/NA.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/img/flags/16/NC.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/img/flags/16/NE.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/img/flags/16/NF.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/img/flags/16/NG.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/img/flags/16/NI.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/img/flags/16/NL.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/img/flags/16/NO.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/img/flags/16/NP.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/img/flags/16/NR.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/img/flags/16/NU.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/img/flags/16/NZ.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/img/flags/16/OM.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/img/flags/16/PA.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/img/flags/16/PE.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/img/flags/16/PF.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/img/flags/16/PG.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/img/flags/16/PH.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/img/flags/16/PK.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/img/flags/16/PL.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/img/flags/16/PN.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/img/flags/16/PR.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/img/flags/16/PS.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/img/flags/16/PT.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/img/flags/16/PW.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/img/flags/16/PY.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/img/flags/16/QA.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/img/flags/16/RE.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/img/flags/16/RO.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/img/flags/16/RS.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/img/flags/16/RU.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/img/flags/16/RW.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/img/flags/16/SA.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/img/flags/16/SB.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/img/flags/16/SC.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/img/flags/16/SD.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/img/flags/16/SE.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/img/flags/16/SG.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/img/flags/16/SH.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/img/flags/16/SI.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/img/flags/16/SK.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/img/flags/16/SL.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/img/flags/16/SM.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/img/flags/16/SN.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/img/flags/16/SO.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/img/flags/16/SR.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/img/flags/16/SS.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/img/flags/16/ST.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/img/flags/16/SV.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/img/flags/16/SX.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/img/flags/16/SY.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/img/flags/16/SZ.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/img/flags/16/TC.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/img/flags/16/TD.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/img/flags/16/TF.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/img/flags/16/TG.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/img/flags/16/TH.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/img/flags/16/TJ.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/img/flags/16/TK.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/img/flags/16/TL.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/img/flags/16/TM.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/img/flags/16/TN.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/img/flags/16/TO.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/img/flags/16/TR.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/img/flags/16/TT.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/img/flags/16/TV.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/img/flags/16/TW.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/img/flags/16/TZ.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/img/flags/16/UA.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/img/flags/16/UG.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/img/flags/16/US.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/img/flags/16/UY.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/img/flags/16/UZ.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/img/flags/16/VA.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/img/flags/16/VC.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/img/flags/16/VE.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/img/flags/16/VG.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/img/flags/16/VI.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/img/flags/16/VN.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/img/flags/16/VU.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/img/flags/16/WF.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/img/flags/16/WS.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/img/flags/16/YE.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/img/flags/16/YT.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/img/flags/16/ZA.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/img/flags/16/ZM.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/img/flags/16/ZW.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/img/flags/16/_abkhazia.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/img/flags/16/_basque-country.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/img/flags/16/_british-antarctic-territory.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/img/flags/16/_commonwealth.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/img/flags/16/_england.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/img/flags/16/_gosquared.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/img/flags/16/_kosovo.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/img/flags/16/_mars.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/img/flags/16/_nagorno-karabakh.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/img/flags/16/_nato.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/img/flags/16/_northern-cyprus.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/img/flags/16/_olympics.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/img/flags/16/_red-cross.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/img/flags/16/_scotland.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/img/flags/16/_somaliland.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/img/flags/16/_south-ossetia.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/img/flags/16/_united-nations.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/img/flags/16/_unknown.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/img/flags/16/_wales.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/img/map-close.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/img/map-marker-blue.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/img/map-marker-default.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/img/map-marker-green.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/img/map-marker-pink.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/img/map-marker-red.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/img/map-marker-sea.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/img/map-marker-violet.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/img/map-marker.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/img/mockup5.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/img/mockup6.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/img/mockup7.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/img/multiselect-switch.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/img/photos/paul-morris-116514-unsplash.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/img/photos/victor-ene-1301123-unsplash.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/img/template-mac.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/js/charts-custom.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/js/charts-custom.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/js/charts-home.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/js/charts-home.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/js/front.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/js/front.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/js/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/js/main.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/js/request.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/js/request.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/vendor/chart.js/Chart.bundle.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/vendor/chart.js/Chart.bundle.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/vendor/chart.js/Chart.bundle.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/vendor/chart.js/Chart.bundle.min.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/vendor/chart.js/Chart.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/vendor/chart.js/Chart.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/vendor/chart.js/Chart.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/vendor/chart.js/Chart.min.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/vendor/malihu-custom-scrollbar-plugin/jquery.mCustomScrollbar.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/vendor/malihu-custom-scrollbar-plugin/jquery.mCustomScrollbar.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/addDlvr.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/addDlvr.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/addDlvrGoods.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/addDlvrGoods.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/addEntr.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/addEntr.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/addEntrGoods.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/addEntrGoods.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/dlvr.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/dlvr.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/dlvrDetail.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/dlvrDetail.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/entr.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/entr.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/entrDetail.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/entrDetail.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/error.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/error.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/goods.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/goods.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/include.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/include.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/login.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/login.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/register.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/register.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/repos.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/repos.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/storage-goods-data.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/storage-goods-data.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/storage-goods.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/storage-goods.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/storage-repo-data.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/storage-repo-data.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/storage-repo.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/storage-repo.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/users.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/users.html" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="DatabaseView">
+    <option name="SHOW_INTERMEDIATE" value="true" />
+    <option name="GROUP_DATA_SOURCES" value="true" />
+    <option name="GROUP_SCHEMA" value="true" />
+    <option name="GROUP_CONTENTS" value="false" />
+    <option name="SORT_POSITIONED" value="false" />
+    <option name="SHOW_EMPTY_GROUPS" value="false" />
+    <option name="AUTO_SCROLL_FROM_SOURCE" value="false" />
+    <option name="HIDDEN_KINDS">
+      <set />
+    </option>
+    <expand />
+    <select />
+  </component>
   <component name="DefaultGradleProjectSettings">
     <option name="isMigrated" value="true" />
   </component>
-  <component name="GradleLocalSettings">
-    <option name="projectSyncType">
-      <map>
-        <entry key="D:/mystuff/myGit/squarenavigationsys" value="PREVIEW" />
-      </map>
+  <component name="FavoritesManager">
+    <favorites_list name="repositorymngsys" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Enum" />
+        <option value="HTML File" />
+        <option value="JavaScript File" />
+        <option value="Interface" />
+        <option value="Class" />
+      </list>
     </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="PREVIOUS_COMMIT_AUTHORS">
+      <list>
+        <option value="LyamAL &lt;zlove750@163.com&gt;" />
+      </list>
+    </option>
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="MavenImportPreferences">
     <option name="generalSettings">
@@ -18,16 +447,386 @@
         <option name="userSettingsFile" value="D:\ZAQ\Maven\.m2\settings.xml" />
       </MavenGeneralSettings>
     </option>
+    <option name="importingSettings">
+      <MavenImportingSettings>
+        <option name="importAutomatically" value="true" />
+      </MavenImportingSettings>
+    </option>
   </component>
   <component name="ProjectId" id="1THH5uSgju2adIdKnW78opE1Ci3" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showExcludedFiles" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
   <component name="PropertiesComponent">
+    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
+    <property name="DatabaseDriversLRU" value="mysql&#10;sqlserver" />
+    <property name="DefaultHtmlFileTemplate" value="HTML File" />
+    <property name="RequestMappingsPanelOrder0" value="0" />
+    <property name="RequestMappingsPanelOrder1" value="1" />
+    <property name="RequestMappingsPanelWidth0" value="75" />
+    <property name="RequestMappingsPanelWidth1" value="75" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
+    <property name="last.edited.regexp" value="s,a" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/main/resources/templates" />
+    <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.detected.package.tslint" value="true" />
+    <property name="node.js.path.for.package.eslint" value="project" />
+    <property name="node.js.path.for.package.tslint" value="project" />
+    <property name="node.js.selected.package.eslint" value="(autodetect)" />
+    <property name="node.js.selected.package.tslint" value="(autodetect)" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
+    <property name="nodejs_package_manager_path" value="npm" />
     <property name="project.structure.last.edited" value="Global Libraries" />
     <property name="project.structure.proportion" value="0.0" />
     <property name="project.structure.side.proportion" value="0.2" />
+    <property name="restartRequiresConfirmation" value="false" />
+    <property name="run.code.analysis.last.selected.profile" value="pProject Default" />
     <property name="settings.editor.selected.configurable" value="MavenSettings" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\ZAQ\IdeaProjects\repositorymngsys\src\main\resources\templates" />
+      <recent name="D:\ZAQ\IdeaProjects\repositorymngsys\src\main\resources\static" />
+      <recent name="D:\ZAQ\IdeaProjects\repositorymngsys\src\main\resources\template" />
+      <recent name="D:\ZAQ\IdeaProjects\repositorymngsys\src\main\resources" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\ZAQ\IdeaProjects\repositorymngsys\src\main\resources\templates" />
+      <recent name="D:\ZAQ\IdeaProjects\repositorymngsys\src\main\resources\static\js" />
+      <recent name="D:\ZAQ\IdeaProjects\repositorymngsys\src\main\java\com\zaq\sjk\repomngsys\config" />
+      <recent name="D:\ZAQ\IdeaProjects\repositorymngsys\src\main\resources\template" />
+      <recent name="D:\ZAQ\IdeaProjects\repositorymngsys\src\main\resources" />
+    </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="com.zaq.sjk.repomngsys.controller" />
+      <recent name="com.zaq.sjk.repomngsys.entity" />
+      <recent name="com.zaq.sjk.repomngsys.repository.impl" />
+      <recent name="com.zaq.sjk.repomngsys.repository" />
+      <recent name="com.zaq.sjk.repomngsys.service.impl" />
+    </key>
+    <key name="CreateClassDialog.RecentsKey">
+      <recent name="com.zaq.sjk.repomngsys.exception" />
+      <recent name="com.zaq.sjk.repomngsys.service" />
+      <recent name="com.zaq.sjk.repomngsys.entity" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Spring Boot.RepositoryMngSysApplication">
+    <configuration name="JavaTest" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="JavaTest" />
+      <module name="repositorymngsys" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="RepositoryMngSysApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true" nameIsGenerated="true">
+      <module name="repositorymngsys" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.zaq.sjk.repomngsys.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.zaq.sjk.repomngsys.RepositoryMngSysApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Spring Boot.RepositoryMngSysApplication" />
+        <item itemvalue="Application.JavaTest" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="ServiceViewManager">
+    <option name="viewStates">
+      <list>
+        <serviceView>
+          <treeState>
+            <expand />
+            <select />
+          </treeState>
+        </serviceView>
+      </list>
+    </option>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="6bb9aea2-4d5d-4911-83a1-fbda5b4e7e71" name="Default Changelist" comment="" />
+      <created>1573109920753</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1573109920753</updated>
+      <workItem from="1573109923633" duration="2723000" />
+      <workItem from="1573128239283" duration="16923000" />
+      <workItem from="1573265667123" duration="612000" />
+      <workItem from="1573740379425" duration="511000" />
+      <workItem from="1573866950121" duration="2183000" />
+      <workItem from="1573974113115" duration="85000" />
+      <workItem from="1573974436175" duration="204000" />
+      <workItem from="1573976339567" duration="18141000" />
+      <workItem from="1574160780189" duration="31073000" />
+      <workItem from="1574861791455" duration="659000" />
+      <workItem from="1574920999420" duration="144000" />
+      <workItem from="1575174708538" duration="776000" />
+      <workItem from="1575207174354" duration="38998000" />
+      <workItem from="1575688623740" duration="25149000" />
+      <workItem from="1575762475471" duration="15875000" />
+      <workItem from="1575786795990" duration="22693000" />
+      <workItem from="1575892764450" duration="3555000" />
+      <workItem from="1575896422849" duration="53404000" />
+      <workItem from="1576151747226" duration="51247000" />
+      <workItem from="1576369620233" duration="6953000" />
+      <workItem from="1576376711942" duration="25265000" />
+      <workItem from="1576478721381" duration="7209000" />
+      <workItem from="1576736764146" duration="9333000" />
+      <workItem from="1576825578497" duration="1466000" />
+      <workItem from="1577089650674" duration="7162000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State>
+              <option name="COLUMN_ORDER" />
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
+    <MESSAGE value="完成" />
+    <option name="LAST_COMMIT_MESSAGE" value="完成" />
+    <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
+    <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
+    <option name="REARRANGE_BEFORE_PROJECT_COMMIT" value="true" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="361" y="103" key="#HTTP_Proxy" timestamp="1576460924651">
+      <screen x="0" y="0" width="1536" height="864" />
+    </state>
+    <state x="361" y="103" key="#HTTP_Proxy/0.0.1536.864@0.0.1536.864" timestamp="1576460924651" />
+    <state x="361" y="94" key="#Project_Structure" timestamp="1576024061784">
+      <screen x="0" y="0" width="1536" height="864" />
+    </state>
+    <state x="361" y="94" key="#Project_Structure/0.0.1536.864@0.0.1536.864" timestamp="1576024061784" />
+    <state x="958" y="144" key="#com.intellij.ide.util.MemberChooser" timestamp="1576739740189">
+      <screen x="0" y="0" width="1536" height="864" />
+    </state>
+    <state x="958" y="144" key="#com.intellij.ide.util.MemberChooser/0.0.1536.864@0.0.1536.864" timestamp="1576739740189" />
+    <state x="449" y="162" key="#com.intellij.openapi.updateSettings.impl.PluginUpdateInfoDialog" timestamp="1577090038686">
+      <screen x="0" y="0" width="1536" height="864" />
+    </state>
+    <state x="449" y="162" key="#com.intellij.openapi.updateSettings.impl.PluginUpdateInfoDialog/0.0.1536.864@0.0.1536.864" timestamp="1577090038686" />
+    <state x="0" y="344" key="#com.intellij.refactoring.memberPullUp.PullUpDialog" timestamp="1576309849016">
+      <screen x="0" y="0" width="1536" height="864" />
+    </state>
+    <state x="0" y="344" key="#com.intellij.refactoring.memberPullUp.PullUpDialog/0.0.1536.864@0.0.1536.864" timestamp="1576309849016" />
+    <state x="499" y="182" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1576396137295">
+      <screen x="0" y="0" width="1536" height="864" />
+    </state>
+    <state x="499" y="182" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1536.864@0.0.1536.864" timestamp="1576396137295" />
+    <state x="499" y="182" key="#com.intellij.refactoring.typeMigration.ui.FailedConversionsDialog" timestamp="1576024669217">
+      <screen x="0" y="0" width="1536" height="864" />
+    </state>
+    <state x="499" y="182" key="#com.intellij.refactoring.typeMigration.ui.FailedConversionsDialog/0.0.1536.864@0.0.1536.864" timestamp="1576024669217" />
+    <state x="137" y="0" key="#org.jetbrains.kotlin.idea.refactoring.safeDelete.KotlinOverridingDialog" timestamp="1576456366595">
+      <screen x="0" y="0" width="1536" height="864" />
+    </state>
+    <state x="137" y="0" key="#org.jetbrains.kotlin.idea.refactoring.safeDelete.KotlinOverridingDialog/0.0.1536.864@0.0.1536.864" timestamp="1576456366595" />
+    <state x="358" y="30" key="CommitChangelistDialog2" timestamp="1577179944500">
+      <screen x="0" y="0" width="1536" height="864" />
+    </state>
+    <state x="358" y="30" key="CommitChangelistDialog2/0.0.1536.864@0.0.1536.864" timestamp="1577179944500" />
+    <state width="1493" height="228" key="GridCell.Tab.0.bottom" timestamp="1577179957653">
+      <screen x="0" y="0" width="1536" height="864" />
+    </state>
+    <state width="1493" height="228" key="GridCell.Tab.0.bottom/0.0.1536.864@0.0.1536.864" timestamp="1577179957653" />
+    <state width="1493" height="228" key="GridCell.Tab.0.center" timestamp="1577179957653">
+      <screen x="0" y="0" width="1536" height="864" />
+    </state>
+    <state width="1493" height="228" key="GridCell.Tab.0.center/0.0.1536.864@0.0.1536.864" timestamp="1577179957653" />
+    <state width="1493" height="228" key="GridCell.Tab.0.left" timestamp="1577179957653">
+      <screen x="0" y="0" width="1536" height="864" />
+    </state>
+    <state width="1493" height="228" key="GridCell.Tab.0.left/0.0.1536.864@0.0.1536.864" timestamp="1577179957653" />
+    <state width="1493" height="228" key="GridCell.Tab.0.right" timestamp="1577179957653">
+      <screen x="0" y="0" width="1536" height="864" />
+    </state>
+    <state width="1493" height="228" key="GridCell.Tab.0.right/0.0.1536.864@0.0.1536.864" timestamp="1577179957653" />
+    <state width="1493" height="228" key="GridCell.Tab.1.bottom" timestamp="1577179957653">
+      <screen x="0" y="0" width="1536" height="864" />
+    </state>
+    <state width="1493" height="228" key="GridCell.Tab.1.bottom/0.0.1536.864@0.0.1536.864" timestamp="1577179957653" />
+    <state width="1493" height="228" key="GridCell.Tab.1.center" timestamp="1577179957653">
+      <screen x="0" y="0" width="1536" height="864" />
+    </state>
+    <state width="1493" height="228" key="GridCell.Tab.1.center/0.0.1536.864@0.0.1536.864" timestamp="1577179957653" />
+    <state width="1493" height="228" key="GridCell.Tab.1.left" timestamp="1577179957653">
+      <screen x="0" y="0" width="1536" height="864" />
+    </state>
+    <state width="1493" height="228" key="GridCell.Tab.1.left/0.0.1536.864@0.0.1536.864" timestamp="1577179957653" />
+    <state width="1493" height="228" key="GridCell.Tab.1.right" timestamp="1577179957653">
+      <screen x="0" y="0" width="1536" height="864" />
+    </state>
+    <state width="1493" height="228" key="GridCell.Tab.1.right/0.0.1536.864@0.0.1536.864" timestamp="1577179957653" />
+    <state width="1493" height="258" key="GridCell.Tab.2.bottom" timestamp="1575886073023">
+      <screen x="0" y="0" width="1536" height="864" />
+    </state>
+    <state width="1493" height="258" key="GridCell.Tab.2.bottom/0.0.1536.864@0.0.1536.864" timestamp="1575886073023" />
+    <state width="1493" height="258" key="GridCell.Tab.2.center" timestamp="1575886073023">
+      <screen x="0" y="0" width="1536" height="864" />
+    </state>
+    <state width="1493" height="258" key="GridCell.Tab.2.center/0.0.1536.864@0.0.1536.864" timestamp="1575886073023" />
+    <state width="1493" height="258" key="GridCell.Tab.2.left" timestamp="1575886073023">
+      <screen x="0" y="0" width="1536" height="864" />
+    </state>
+    <state width="1493" height="258" key="GridCell.Tab.2.left/0.0.1536.864@0.0.1536.864" timestamp="1575886073023" />
+    <state width="1493" height="258" key="GridCell.Tab.2.right" timestamp="1575886073023">
+      <screen x="0" y="0" width="1536" height="864" />
+    </state>
+    <state width="1493" height="258" key="GridCell.Tab.2.right/0.0.1536.864@0.0.1536.864" timestamp="1575886073023" />
+    <state x="349" y="170" key="IDE.errors.dialog" timestamp="1576402486056">
+      <screen x="0" y="0" width="1536" height="864" />
+    </state>
+    <state x="349" y="170" key="IDE.errors.dialog/0.0.1536.864@0.0.1536.864" timestamp="1576402486056" />
+    <state x="249" y="10" key="SettingsEditor" timestamp="1576478800011">
+      <screen x="0" y="0" width="1536" height="864" />
+    </state>
+    <state x="249" y="10" key="SettingsEditor/0.0.1536.864@0.0.1536.864" timestamp="1576478800011" />
+    <state width="498" height="540" key="SwitcherDM" timestamp="1576379517352">
+      <screen x="0" y="0" width="1536" height="864" />
+    </state>
+    <state width="498" height="540" key="SwitcherDM/0.0.1536.864@0.0.1536.864" timestamp="1576379517352" />
+    <state x="524" y="279" key="cloudConfig.SelfSettingsDialog" timestamp="1575856855488">
+      <screen x="0" y="0" width="1536" height="864" />
+    </state>
+    <state x="524" y="279" key="cloudConfig.SelfSettingsDialog/0.0.1536.864@0.0.1536.864" timestamp="1575856855488" />
+    <state x="461" y="260" key="com.intellij.ide.util.TipDialog" timestamp="1577090039794">
+      <screen x="0" y="0" width="1536" height="864" />
+    </state>
+    <state x="461" y="260" key="com.intellij.ide.util.TipDialog/0.0.1536.864@0.0.1536.864" timestamp="1577090039794" />
+    <state x="236" y="171" key="com.intellij.xdebugger.impl.breakpoints.ui.BreakpointsDialogFactory$2" timestamp="1575788678009">
+      <screen x="0" y="0" width="1536" height="864" />
+    </state>
+    <state x="236" y="171" key="com.intellij.xdebugger.impl.breakpoints.ui.BreakpointsDialogFactory$2/0.0.1536.864@0.0.1536.864" timestamp="1575788678009" />
+    <state width="600" height="424" key="javadoc.popup" timestamp="1575815309200">
+      <screen x="0" y="0" width="1536" height="864" />
+    </state>
+    <state width="376" height="220" key="javadoc.popup.new" timestamp="1576221531269">
+      <screen x="0" y="0" width="1536" height="864" />
+    </state>
+    <state width="376" height="220" key="javadoc.popup.new/0.0.1536.864@0.0.1536.864" timestamp="1576221531269" />
+    <state width="600" height="424" key="javadoc.popup/0.0.1536.864@0.0.1536.864" timestamp="1575815309200" />
+    <state x="511" y="65" key="refactoring.ChangeSignatureDialog" timestamp="1576311861137">
+      <screen x="0" y="0" width="1536" height="864" />
+    </state>
+    <state x="511" y="65" key="refactoring.ChangeSignatureDialog/0.0.1536.864@0.0.1536.864" timestamp="1576311861137" />
+    <state x="425" y="197" key="run.anything.popup" timestamp="1576308999391">
+      <screen x="0" y="0" width="1536" height="864" />
+    </state>
+    <state x="425" y="197" key="run.anything.popup/0.0.1536.864@0.0.1536.864" timestamp="1576308999391" />
+    <state x="430" y="182" width="672" height="678" key="search.everywhere.popup" timestamp="1577179669500">
+      <screen x="0" y="0" width="1536" height="864" />
+    </state>
+    <state x="430" y="182" width="672" height="678" key="search.everywhere.popup/0.0.1536.864@0.0.1536.864" timestamp="1577179669500" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>jar://$PROJECT_DIR$/../../Maven/.m2/repository/org/springframework/security/spring-security-web/5.2.0.RELEASE/spring-security-web-5.2.0.RELEASE.jar!/org/springframework/security/web/authentication/SavedRequestAwareAuthenticationSuccessHandler.class</url>
+          <line>34</line>
+          <option name="timeStamp" value="36" />
+        </line-breakpoint>
+        <line-breakpoint type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/zaq/sjk/repomngsys/controller/UserController.java</url>
+          <line>83</line>
+          <option name="timeStamp" value="48" />
+        </line-breakpoint>
+        <line-breakpoint type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/zaq/sjk/repomngsys/controller/UserController.java</url>
+          <line>58</line>
+          <option name="timeStamp" value="51" />
+        </line-breakpoint>
+        <line-breakpoint type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/zaq/sjk/repomngsys/controller/UserController.java</url>
+          <line>51</line>
+          <option name="timeStamp" value="56" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/zaq/sjk/repomngsys/controller/RepositoryController.java</url>
+          <line>52</line>
+          <option name="timeStamp" value="62" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/zaq/sjk/repomngsys/controller/DeliveryController.java</url>
+          <line>91</line>
+          <option name="timeStamp" value="127" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/zaq/sjk/repomngsys/controller/EntryController.java</url>
+          <line>54</line>
+          <option name="timeStamp" value="158" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/zaq/sjk/repomngsys/controller/EntryController.java</url>
+          <line>119</line>
+          <option name="timeStamp" value="165" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/zaq/sjk/repomngsys/config/MyAccessDecisionManager.java</url>
+          <line>21</line>
+          <option name="timeStamp" value="189" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/zaq/sjk/repomngsys/config/MyAuthenticationFailureHandler.java</url>
+          <line>22</line>
+          <option name="timeStamp" value="192" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-field">
+          <url>file://$PROJECT_DIR$/src/main/java/com/zaq/sjk/repomngsys/repository/impl/UserRepositoryImpl.java</url>
+          <line>35</line>
+          <properties field="userByPhoneQuery" class="com.zaq.sjk.repomngsys.repository.impl.UserRepositoryImpl" />
+          <option name="timeStamp" value="193" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-field">
+          <url>file://$PROJECT_DIR$/src/main/java/com/zaq/sjk/repomngsys/repository/impl/UserRepositoryImpl.java</url>
+          <line>34</line>
+          <properties field="groupAuthoritiesByPhoneQuery" class="com.zaq.sjk.repomngsys.repository.impl.UserRepositoryImpl" />
+          <option name="timeStamp" value="194" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-field">
+          <url>file://$PROJECT_DIR$/src/main/java/com/zaq/sjk/repomngsys/repository/impl/UserRepositoryImpl.java</url>
+          <line>42</line>
+          <properties field="executeUserCustomRoleProcedure" class="com.zaq.sjk.repomngsys.repository.impl.UserRepositoryImpl" />
+          <option name="timeStamp" value="195" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+  </component>
+  <component name="XPathView.XPathProjectComponent">
+    <history />
+    <find-history />
   </component>
 </project>

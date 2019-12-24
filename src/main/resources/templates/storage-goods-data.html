@@ -29,25 +29,11 @@
                 <div class="col-lg-12">
                     <div class="card">
                         <div id="headline" class="card-header d-flex align-items-center">
-                            <h4>按货品查看</h4>
+                            <h4>按货品查看--<span th:text="${name}"></span></h4>
                         </div>
                         <div class="card-body">
                             <form class="form-horizontal">
                                 <div class="form-group row">
-                                    <label class="col-sm-2 form-control-label">选择货品</label>
-                                    <div class="col-sm-10 mb-3">
-                                        <div class="input-group">
-                                            <select name="name" class="form-control" id="select">
-                                                <option th:each="good:${goods}" th:id="'opt'+${good.id}"
-                                                        th:selected="(${#httpServletRequest.getParameter('name')}==${good.name})"
-                                                        th:value="${good.name}"
-                                                        th:text="${good.name}"></option>
-                                            </select>
-                                            <div class="input-group-prepend">
-                                                <button id="submit-position" class="btn btn-primary">Go!</button>
-                                            </div>
-                                        </div>
-                                    </div>
 
                                     <div class="col-lg-4 col-md-6">
                                         <div class="card project-progress">
@@ -58,7 +44,7 @@
                                         </div>
                                     </div>
 
-                                    <div class="col-lg-8 col-md-6">
+                                    <div class="col-lg-8 col-md-6" th:if="${storageByGood}">
                                         <div class="table-responsive">
                                             <table class="table table-striped table-hover">
                                                 <thead>
@@ -76,21 +62,23 @@
                                                     th:id="'storage'+${iterStat.count}">
                                                     <th scope="row" th:text="${iterStat.count}"></th>
                                                     <td th:text="${storage.repo.position}"></td>
-                                                    <td><input th:text="${storage.qualified}" name="qualified"
+                                                    <td><input name="qualified"
                                                                th:value="${storage.qualified}">
                                                     </td>
                                                     <td th:text="${storage.count} - ${storage.qualified}"></td>
-                                                    <td><input th:text="${storage.count}" name="count"
+                                                    <td><input name="count"
                                                                th:value="${storage.count}">
                                                     </td>
                                                     <td>
                                                         <button class="btn btn-secondary text-white text-center"
+                                                                th:onclick="updateStorage([[${gid}]],[[${storage.repo.id}]],[[iterStat.count]],[[${iterStat.size}]])"
                                                                 th:text="|修改|"
-                                                                th:onclick="updateStorage([[${storage.good.gid}]],[[${storage.repo.id}]])">
+                                                                type="button">
                                                         </button>
                                                         <button class="btn btn-danger text-white text-center"
+                                                                th:onclick="deleteGoodInRepo([[${gid}]],[[${storage.repo.id}]])"
                                                                 th:text="|删除|"
-                                                                th:onclick="deleteGoodInRepo([[${storage.good.gid}]],[[${storage.repo.id}]])">
+                                                                type="button">
                                                         </button>
                                                     </td>
                                                 </tr>
@@ -112,15 +100,12 @@
 </div>
 <th:block th:include="include::scripts"/>
 <script>
-    GoodStorage.init();
-
     function deleteGoodInRepo(gid, repoId) {
-        alert(gid,repoId)
         GoodStorage.deleteGoodInRepo(gid, repoId)
     }
 
-    function updateStorage(gid, repoId) {
-        GoodStorage.updateStorage(gid, repoId);
+    function updateStorage(gid, repoId, idx, count) {
+        GoodStorage.updateStorage(gid, repoId, idx, count);
     }
 </script>
 

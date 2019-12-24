@@ -1,6 +1,8 @@
-package com.zaq.sjk.repomngsys.service;
+package com.zaq.sjk.repomngsys.service.impl;
 
+import com.zaq.sjk.repomngsys.entity.RoleTitle;
 import com.zaq.sjk.repomngsys.entity.User;
+import com.zaq.sjk.repomngsys.entity.UserDTO;
 import com.zaq.sjk.repomngsys.repository.impl.UserRepositoryImpl;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -29,7 +31,7 @@ public class UserServiceImpl implements UserDetailsService {
 
     private Logger logger = LoggerFactory.getLogger("");
 
-    public UserServiceImpl(@Autowired BCryptPasswordEncoder encoder,@Autowired UserRepositoryImpl userRepository) {
+    public UserServiceImpl(@Autowired BCryptPasswordEncoder encoder, @Autowired UserRepositoryImpl userRepository) {
         this.encoder = encoder;
         this.userRepository = userRepository;
     }
@@ -37,19 +39,18 @@ public class UserServiceImpl implements UserDetailsService {
     @Override
     public UserDetails loadUserByUsername(String phone) throws UsernameNotFoundException {
         UserDetails user = userRepository.loadUsersByUsername(phone);
-        if (user == null){
+        if (user == null) {
             this.logger.debug("User {} not found", phone);
-            throw new UsernameNotFoundException("User "+phone +" not found");
+            throw new UsernameNotFoundException("User " + phone + " not found");
         }
+        //配置用户权限
         Set<GrantedAuthority> dbAuthsSet = new HashSet();
         if (userRepository.isEnableAuthorities()) {
             dbAuthsSet.addAll(userRepository.loadUserAuthorities(user.getUsername()));
         }
-
         if (userRepository.isEnableGroups()) {
             dbAuthsSet.addAll(userRepository.loadGroupAuthorities(user.getUsername()));
         }
-
         List<GrantedAuthority> dbAuths = new ArrayList(dbAuthsSet);
         if (dbAuths.size() == 0) {
             this.logger.debug("User {} has no authorities and will be treated as not found", phone);
@@ -59,14 +60,63 @@ public class UserServiceImpl implements UserDetailsService {
         }
     }
 
-    public int save(User user) {
+    public short save(User user) {
         String encodedPsw = encoder.encode(user.getPassword());
         user.setPassword(encodedPsw);
-        return userRepository.insert(user);
+        if (user.getTitles() != null && user.getTitles().split(",").length > 0) {
+            return userRepository.insertUserWithCustomRole(user);
+        }
+        return (short) userRepository.insertUserWithDefaultRole(user);
     }
 
     public int countUsers() {
         return userRepository.count();
+    }
 
+    public List<User> listAll() {
+        List<User> users = userRepository.selectAll();
+        for (User u : users) {
+            String[] titles = u.getTitles().split(",");
+            StringBuilder sb = new StringBuilder();
+            for (String title : titles) {
+                sb.append(toChinese(title)).append(",");
+            }
+            sb.replace(sb.length() - 1, sb.length(), "");
+            u.setTitles(sb.toString());
+        }
+        return users;
+    }
+
+    private String toChinese(String title) {
+        switch (title) {
+            case RoleTitle.Purchaser:
+                return "采购员";
+            case RoleTitle.User:
+                return "普通用户";
+            case RoleTitle.RepoAdmin:
+                return "仓库管理员";
+            case RoleTitle.SysAdmin:
+                return "系统管理员";
+            case RoleTitle.Consignor:
+                return "发货员";
+            default:
+                return "";
+        }
+    }
+
+    public int deleteByPhone(String phone) {
+        return userRepository.deleteByPhone(phone);
+    }
+
+    public int update(UserDTO user) {
+        return userRepository.update(user);
+    }
+
+    public List<User> listByRole(String roleTitle) {
+        return this.userRepository.selectByRole(roleTitle);
+    }
+
+    public String getUserInfoByPhone(String phone) {
+        return userRepository.selectUserNameByPhone(phone);
     }
 }

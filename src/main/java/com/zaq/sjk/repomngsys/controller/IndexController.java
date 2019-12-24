@@ -1,59 +1,43 @@
 package com.zaq.sjk.repomngsys.controller;
 
-import com.zaq.sjk.repomngsys.entity.User;
-import com.zaq.sjk.repomngsys.service.UserServiceImpl;
+import com.zaq.sjk.repomngsys.service.DeliveryService;
+import com.zaq.sjk.repomngsys.service.EntryService;
+import com.zaq.sjk.repomngsys.service.impl.UserServiceImpl;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.http.MediaType;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
-import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
-import org.springframework.web.servlet.mvc.support.RedirectAttributesModelMap;
 
-import javax.servlet.http.HttpServletRequest;
-import java.io.BufferedInputStream;
-import java.io.IOException;
-import java.io.ObjectInputStream;
+import java.util.HashMap;
+import java.util.Map;
 
 /**
  * @author ZAQ
  */
 @Controller
-@RequestMapping("/user")
-public class UserController {
+public class IndexController {
+    private static final String USERS_COUNT = "usersCount";
+    private static final String ENTRIES_COUNT = "entriesCount";
+    private static final String DELIVERY_COUNT = "deliveryCount";
     private UserServiceImpl userService;
+    private DeliveryService deliveryService;
+    private EntryService entryService;
 
-    public UserController(@Autowired UserServiceImpl userService) {
+    public IndexController(@Autowired UserServiceImpl userService, @Autowired DeliveryService deliveryService, @Autowired EntryService entryService) {
         this.userService = userService;
+        this.deliveryService = deliveryService;
+        this.entryService = entryService;
     }
 
-    @RequestMapping(value = "/register")
-    public String toRegister(Model model) {
-        model.addAttribute("user", new User());
-        return "register";
+    @RequestMapping(value = "/index")
+    public String init(Model model) {
+        Map<String, Object> initialData = new HashMap<>();
+        initialData.put(USERS_COUNT, userService.countUsers());
+        initialData.put(DELIVERY_COUNT, deliveryService.getSheetCounts());
+        initialData.put(ENTRIES_COUNT, entryService.getSheetCounts());
+        model.addAllAttributes(initialData);
+        return "index";
     }
 
-    @RequestMapping(value = "/register",method = RequestMethod.POST)
-    public String registerSubmit(User user) {
-        int res = userService.save(user);
-        if (res > 0){
-            Model model = new RedirectAttributesModelMap();
-            model.addAttribute(user);
-            return login(model);
-        }else{
-            return "error";
-        }
-    }
-    @RequestMapping(value = "/login",method = RequestMethod.GET)
-    public String login(Model model) {
-        model.addAttribute("user", new User());
-        return "login";
-    }
-    @RequestMapping(value = "/error")
-    public String error(Model model) {
-        model.addAttribute("error", "登陆失败");
-        return "error";
-    }
 
 }

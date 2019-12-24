@@ -1,0 +1,84 @@
+<html xmlns:th="http://www.thymeleaf.org" lang="en">
+<head lang="en">
+    <th:block th:include="include :: header('出入库')"/>
+</head>
+<body>
+<!-- Side Navbar -->
+<nav class="side-navbar">
+    <th:block th:include="include :: sideNavBar('6')"/>
+</nav>
+<div class="page">
+    <header class="header">
+        <th:block th:include="include :: topNavBar"/>
+    </header>
+    <!-- Breadcrumb-->
+    <div class="breadcrumb-holder">
+        <div class="container-fluid">
+            <ul class="breadcrumb">
+                <li class="breadcrumb-item"><a th:href="@{/index}">首页</a></li>
+                <li class="breadcrumb-item active">出库单管理</li>
+            </ul>
+        </div>
+    </div>
+    <section class="forms">
+        <div class="container-fluid">
+            <!-- Page Header-->
+            <header>
+                <a class="btn btn-primary text-white" th:href="@{/sheet/dlvr/add}">填写出库单 </a>
+            </header>
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="card">
+                        <div class="card-header d-flex align-items-center">
+                            <h4>所有出库单</h4>
+                        </div>
+                        <div class="card-body">
+                            <div class="table-responsive" id="dlvr-table">
+                                <table class="table table-striped table-hover">
+                                    <thead>
+                                    <tr>
+                                        <th>#</th>
+                                        <th>创建时间</th>
+                                        <th>源仓库</th>
+                                        <th>状态</th>
+                                        <th>负责人</th>
+                                        <th>目的地</th>
+                                        <th>备注</th>
+                                        <th>操作</th>
+                                    </tr>
+                                    </thead>
+                                    <tbody>
+                                    <tr th:each="dlvr,iterStat:${delivers}" th:id="'dlvr'+${iterStat.count}">
+                                        <th scope="row" th:text="${iterStat.count}"></th>
+                                        <td th:text="${dlvr.createTime}"></td>
+                                        <td th:text="${dlvr.repoId.position}"></td>
+                                        <td th:text="${dlvr.deliveryStatus}"></td>
+                                        <td th:text="${dlvr.contact}"></td>
+                                        <td th:text="${dlvr.destination}"></td>
+                                        <td th:text="${dlvr.note}"></td>
+                                        <td>
+                                            <a id="update-dlvr" th:href="@{/sheet/dlvr/update(id=${dlvr.id})}" class="btn btn-secondary text-white text-center" th:text="|查看/修改|"></a>
+                                            <a th:onclick="deleteSheet([[${dlvr.id}]])" class="btn btn-danger text-white text-center" th:text="删除"></a>
+                                        </td>
+                                    </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <footer class="main-footer">
+        <th:block th:include="include ::footer"/>
+    </footer>
+</div>
+<th:block th:include="include::scripts"/>
+<script>
+    function deleteSheet(id){
+        Dlvr.deleteSheet(id)
+    }
+</script>
+</body>
+</html>

@@ -1,72 +1,80 @@
 <!DOCTYPE html>
-<html>
-  <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Bootstrap Dashboard</title>
-    <meta name="description" content="">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="robots" content="all,follow">
-    <!-- Bootstrap CSS-->
-    <link rel="stylesheet" href="static/vendor/bootstrap/css/bootstrap.min.css">
-    <!-- Font Awesome CSS-->
-    <link rel="stylesheet" href="static/vendor/font-awesome/css/font-awesome.min.css">
+<html lang="ch" xmlns:th="http://www.thymeleaf.org">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Bootstrap Dashboard</title>
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="all,follow">
+  <!-- Bootstrap CSS-->
+  <link rel="stylesheet" th:href="@{/webjars/bootstrap/4.3.1/css/bootstrap.min.css}">
+  <!-- Font Awesome CSS-->
+  <link rel="stylesheet" th:href="@{/webjars/font-awesome/5.11.2/css/fontawesome.min.css}">
     <!-- Fontastic Custom icon font-->
-    <link rel="stylesheet" href="static/css/fontastic.css">
+  <link rel="stylesheet" th:href="@{/css/fontastic.css}">
     <!-- Google fonts - Roboto -->
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700">
     <!-- jQuery Circle-->
-    <link rel="stylesheet" href="static/css/grasp_mobile_progress_circle-1.0.0.min.css">
+  <link rel="stylesheet" th:href="@{/css/grasp_mobile_progress_circle-1.0.0.min.css}">
     <!-- Custom Scrollbar-->
-    <link rel="stylesheet" href="static/vendor/malihu-custom-scrollbar-plugin/jquery.mCustomScrollbar.css">
+  <link rel="stylesheet" th:href="@{/webjars/malihu-custom-scrollbar-plugin/3.1.5/jquery.mCustomScrollbar.css}">
     <!-- theme stylesheet-->
-    <link rel="stylesheet" href="static/css/style.default.css" id="theme-stylesheet">
+  <link id="theme-stylesheet" rel="stylesheet" th:href="@{/css/style.default.css}">
     <!-- Custom stylesheet - for your changes-->
-    <link rel="stylesheet" href="static/css/custom.css">
+  <link rel="stylesheet" th:href="@{/css/custom.css}">
     <!-- Favicon-->
-    <link rel="shortcut icon" href="static/img/favicon.ico">
-    <!-- Tweaks for older IEs--><!--[if lt IE 9]>
-        <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
-        <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script><![endif]-->
+  <link rel="shortcut icon" th:href="@{/img/favicon.ico}">
+  <!-- Tweaks for older IEs--><!--[if lt IE 9]>
+  <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+  <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script><![endif]-->
   </head>
   <body>
     <div class="page login-page">
       <div class="container">
         <div class="form-outer text-center d-flex align-items-center">
           <div class="form-inner">
-            <div class="logo text-uppercase"><span>Bootstrap</span><strong class="text-primary">Dashboard</strong></div>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud.</p>
-            <form method="get" class="text-left form-validate">
+            <div class="logo text-uppercase"><span>仓库管理系统</span>
+              <strong class="text-primary">WMS</strong></div>
+            <p>仅限本系统管理员登录噢</p>
+            <form accept-charset="UTF-8" class="text-left form-validate"
+                  th:action="@{/user/login}" th:method="post"
+                  th:object="${user}">
               <div class="form-group-material">
-                <input id="login-username" type="text" name="loginUsername" required data-msg="Please enter your username" class="input-material">
-                <label for="login-username" class="label-material">Username</label>
+                <input class="input-material" data-msg="请输入您的手机号" id="login-phone"
+                       name="loginPhone" required th:field="${user.phone}"
+                       th:placeholder="手机号" th:value="${user.phone}" type="number">
+                <label class="label-material" for="login-phone"></label>
               </div>
               <div class="form-group-material">
-                <input id="login-password" type="password" name="loginPassword" required data-msg="Please enter your password" class="input-material">
-                <label for="login-password" class="label-material">Password</label>
+                <input class="input-material" data-msg="请输入您的密码"
+                       id="login-password" name="loginPassword" required
+                       th:field="${user.password}" th:placeholder="密码" type="password">
+                <label class="label-material" for="login-password"></label>
               </div>
-              <div class="form-group text-center"><a id="login" href="templates/index.html" class="btn btn-primary">Login</a>
-                <!-- This should be submit button but I replaced it with <a> for demo purposes-->
+              <div class="form-group text-center">
+                <button class="btn btn-primary" id="login"
+                        type="submit">登录
+                </button>
               </div>
-            </form><a href="#" class="forgot-pass">Forgot Password?</a><small>Do not have an account? </small><a href="register.html" class="signup">Signup</a>
-          </div>
-          <div class="copyrights text-center">
-            More Templates <a href="http://www.cssmoban.com/" target="_blank" title="模板之家">模板之家</a> - Collect from <a href="http://www.cssmoban.com/" title="网页模板" target="_blank">网页模板</a>
-            
+            </form>
+            <div class="forgot-pass">忘记密码请联系本系统管理员</div>
+            <small>没有账号？</small>
+            <a class="signup" th:href="@{/user/register}">注册</a>
           </div>
         </div>
       </div>
     </div>
     <!-- JavaScript files-->
-    <script src="static/vendor/jquery/jquery.min.js"></script>
-    <script src="static/vendor/popper.js/umd/popper.min.js"> </script>
-    <script src="static/vendor/bootstrap/js/bootstrap.min.js"></script>
-    <script src="static/js/grasp_mobile_progress_circle-1.0.0.min.js"></script>
-    <script src="static/vendor/jquery.cookie/jquery.cookie.js"> </script>
-    <script src="static/vendor/chart.js/Chart.min.js"></script>
-    <script src="static/vendor/jquery-validation/jquery.validate.min.js"></script>
-    <script src="static/vendor/malihu-custom-scrollbar-plugin/jquery.mCustomScrollbar.concat.min.js"></script>
+    <script th:src="@{/js/grasp_mobile_progress_circle-1.0.0.min.js}"></script>
+    <script th:src="@{/webjars/jquery/3.0.0/jquery.min.js}"></script>
+    <script th:src="@{/webjars/popper/js/1.15.0/umd/popper.min.js}"></script>
+    <script th:src="@{/webjars/bootstrap/4.3.1/js/bootstrap.min.js}"></script>
+    <script th:src="@{/webjars/jquery-cookie/1.4.1-1/jquery.cookie.js}"></script>
+    <script th:src="@{/webjars/chartjs/26962ce/Chart.min.js}"></script>
+    <script th:src="@{/webjars/jquery-validation/1.19.0/jquery.validate.min.js}"></script>
+    <script th:src="@{/webjars/malihu-custom-scrollbar-plugin/3.1.5/jquery.mCustomScrollbar.concat.min.js}"></script>
     <!-- Main File-->
-    <script src="static/js/front.js"></script>
+    <script th:src="@{/js/front.js}"></script>
   </body>
 </html>

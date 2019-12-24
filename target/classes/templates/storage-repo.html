@@ -1,0 +1,69 @@
+<html xmlns:th="http://www.thymeleaf.org" lang="en">
+<head lang="en">
+    <th:block th:include="include :: header('库区管理')"/>
+</head>
+<body>
+<!-- Side Navbar -->
+<nav class="side-navbar">
+    <th:block th:include="include :: sideNavBar('3')"/>
+</nav>
+<div class="page">
+    <header class="header">
+        <th:block th:include="include :: topNavBar"/>
+    </header>
+    <!-- Breadcrumb-->
+    <div class="breadcrumb-holder">
+        <div class="container-fluid">
+            <ul class="breadcrumb">
+                <li class="breadcrumb-item"><a th:href="@{/index}">首页</a></li>
+                <li class="breadcrumb-item active">库存管理</li>
+            </ul>
+        </div>
+    </div>
+    <section class="forms">
+        <div class="container-fluid">
+            <header>
+                <a class="btn btn-primary text-white" th:href="@{/storage/goods}">按货品查看 </a>
+            </header>
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="card">
+                        <div id="headline" class="card-header d-flex align-items-center">
+                            <h4>按库区查看</h4>
+                        </div>
+                        <div class="card-body">
+                            <form class="form-horizontal">
+                                <div class="form-group row">
+                                    <label class="col-sm-2 form-control-label">选择库区</label>
+                                    <div class="col-sm-10 mb-3">
+                                        <div class="input-group">
+                                            <select name="position" class="form-control" id="select">
+                                                <option th:each="repo:${repos}" th:id="'opt'+${repo.id}"
+                                                        th:selected="(${#httpServletRequest.getParameter('position')}==${repo.position})"
+                                                        th:value="${repo.position}"
+                                                        th:text="${repo.position}"></option>
+                                            </select>
+                                            <div class="input-group-prepend">
+                                                <button type="button" id="submit-position" class="btn btn-primary">Go!
+                                                </button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <footer class="main-footer">
+        <th:block th:include="include ::footer"/>
+    </footer>
+</div>
+<th:block th:include="include::scripts"/>
+<script>
+    RepoStorage.init();
+</script>
+</body>
+</html>

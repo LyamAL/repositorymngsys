@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head lang="en">
+    <!--把header里的内容加进来-->
+    <th:block th:include="include :: header('WMS')"/>
+</head>
+<body>
+<!-- Side Navbar -->
+<nav class="side-navbar">
+    <th:block th:include="include :: sideNavBar('0')"/>
+</nav>
+<div class="page">
+    <header class="header">
+        <th:block th:include="include :: topNavBar"/>
+    </header>
+    <!-- Counts Section -->
+    <section class="dashboard-counts section-padding">
+        <div class="container-fluid">
+            <div class="row">
+                <!-- Count item widget-->
+                <div class="col-xl-2 col-md-4 col-6">
+                    <div class="wrapper count-title d-flex">
+                        <div class="icon"><i class="icon-user"></i></div>
+                        <div class="name"><strong class="text-uppercase">用户管理</strong>
+                            <div class="count-number" th:text="${usersCount}"></div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Count item widget-->
+                <div class="col-xl-2 col-md-4 col-6">
+                    <div class="wrapper count-title d-flex">
+                        <div class="icon"><i class="icon-padnote"></i></div>
+                        <div class="name"><strong class="text-uppercase">出库单</strong><span>过去5天</span>
+                            <div class="count-number" th:text="${deliveryCount}"></div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Count item widget-->
+                <div class="col-xl-2 col-md-4 col-6">
+                    <div class="wrapper count-title d-flex">
+                        <div class="icon"><i class="icon-check"></i></div>
+                        <div class="name"><strong class="text-uppercase">入库单</strong><span>过去5天</span>
+                            <div class="count-number" th:text="${entriesCount}"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+  
+    <footer class="main-footer">
+        <th:block th:include="include ::footer"/>
+    </footer>
+</div>
+<th:block th:include="include::scripts"/>
+</body>
+</html>

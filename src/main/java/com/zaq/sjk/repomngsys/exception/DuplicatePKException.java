@@ -1,8 +1,10 @@
 package com.zaq.sjk.repomngsys.exception;
 
+import java.sql.SQLException;
+
 /**
  * @author ZAQ
  */
-public class DuplicatePhoneException extends Throwable {
+public class DuplicatePKException extends SQLException {
 
 }

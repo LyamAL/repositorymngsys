@@ -10,11 +10,13 @@ import lombok.*;
 @NoArgsConstructor
 @AllArgsConstructor
 @ToString
-public class Good {
+public class Repo {
     private int id;
-    private String origin;
-    private String name;
-    private float price;
-    private int count;
-    private int repoId;
+    private int capacity;
+    private int used;
+    private String position;
+
+    public Repo(String position) {
+        this.position = position;
+    }
 }

@@ -1,4 +1,4 @@
-package com.zaq.sjk.repomngsys.utils;
+package com.zaq.sjk.repomngsys.entity;
 
 /**
  * @author ZAQ

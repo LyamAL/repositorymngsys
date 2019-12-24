@@ -1,0 +1,174 @@
+<html xmlns:th="http://www.thymeleaf.org" lang="en">
+<head lang="en">
+    <th:block th:include="include :: header('货物管理')"/>
+</head>
+<body>
+<!-- Side Navbar -->
+<nav class="side-navbar">
+    <th:block th:include="include :: sideNavBar('4')"/>
+</nav>
+<div class="page">
+    <header class="header">
+        <th:block th:include="include :: topNavBar"/>
+    </header>
+    <!-- Breadcrumb-->
+    <div class="breadcrumb-holder">
+        <div class="container-fluid">
+            <ul class="breadcrumb">
+                <li class="breadcrumb-item"><a th:href="@{/index}">首页</a></li>
+                <li class="breadcrumb-item active">货物管理</li>
+            </ul>
+        </div>
+    </div>
+    <section class="forms">
+        <div class="container-fluid">
+            <!-- Page Header-->
+            <header>
+                <a class="btn btn-primary text-white" th:onclick="switchFrame([[0]]);return true;">添加货品 </a>
+                <a class="btn btn-primary text-white" th:onclick="switchFrame([[1]]);return true;">修改货品 </a>
+                <a class="btn btn-primary text-white" th:onclick="switchFrame([[2]]);return true;">所有货品 </a>
+            </header>
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="card">
+                        <div class="card-header">
+                            <h4 id="headline">所有货品</h4>
+                        </div>
+                        <div class="card-body">
+                            <form class="form-horizontal" style="display: none" id="update-good-form">
+                                <input id="update-id" type="hidden" name="id">
+                                <div class="form-group row">
+                                    <label class="col-sm-2 form-control-label">货物名</label>
+                                    <div class="col-sm-10">
+                                        <input id="update-name" name="name" type="text" class="form-control">
+                                    </div>
+                                </div>
+                                <div class="line"></div>
+                                <div class="form-group row">
+                                    <label class="col-sm-2 form-control-label">货源</label>
+                                    <div class="col-sm-10">
+                                        <input id="update-origin" type="text" name="origin" class="form-control">
+                                    </div>
+                                </div>
+                                <div class="line"></div>
+                                <div class="form-group row">
+                                    <label class="col-sm-2 form-control-label">单价</label>
+                                    <div class="col-sm-10">
+                                        <input id="update-price" type="number" name="price" class="form-control">
+                                    </div>
+                                </div>
+                                <div class="line"></div>
+                                <div class="form-group row">
+                                    <label class="col-sm-2 form-control-label">单位</label>
+                                    <div class="col-sm-10">
+                                        <input id="update-unit" type="text" name="unit" class="form-control">
+                                    </div>
+                                </div>
+                                <div class="line"></div>
+
+                                <div class="form-group row">
+                                    <div class="col-sm-4 offset-sm-2">
+                                        <button th:onclick="switchFrame([[2]])" class="btn btn-secondary">取消</button>
+                                        <button id="btn-submit-change" class="btn btn-primary">保存更改</button>
+                                    </div>
+                                </div>
+                            </form>
+                            <canvas id="goods-sale-chart" style="display: none"></canvas>
+                            <form id="good-form" class="form-horizontal" style="display: none;">
+                                <div class="row">
+                                    <label class="col-sm-2 form-control-label">基本信息</label>
+                                    <div class="col-sm-10">
+                                        <div class="form-group-material">
+                                            <input id="add-name" type="text" name="name" required
+                                                   class="input-material">
+                                            <label for="add-name" class="label-material">货物名</label>
+                                        </div>
+                                        <div class="form-group-material">
+                                            <input id="add-origin" type="tel" name="origin" required
+                                                   class="input-material">
+                                            <label for="add-origin" class="label-material">货源</label>
+                                        </div>
+                                        <div class="form-group-material">
+                                            <input id="add-price" type="number" name="price"
+                                                   required class="input-material">
+                                            <label for="add-price" class="label-material">单价</label>
+                                        </div>
+                                        <div class="form-group-material">
+                                            <input id="add-unit" type="text" name="unit"
+                                                   required class="input-material">
+                                            <label for="add-unit" class="label-material">单位</label>
+                                        </div>
+
+                                    </div>
+                                </div>
+                                <div class="line"></div>
+                                <div class="form-group row">
+                                    <div class="col-sm-4 offset-sm-2">
+                                        <button th:onclick="switchFrame([[2]])" class="btn btn-secondary">取消</button>
+                                        <button id="btn-submit" class="btn btn-primary">添加</button>
+                                    </div>
+                                </div>
+                            </form>
+                            <div class="table-responsive" id="goods-table">
+                                <table class="table table-striped table-hover">
+                                    <thead>
+                                    <tr>
+                                        <th>#</th>
+                                        <th>货物名</th>
+                                        <th>货源</th>
+                                        <th>单价</th>
+                                        <th>单位</th>
+                                        <th>操作</th>
+                                    </tr>
+                                    </thead>
+                                    <tbody>
+                                    <tr th:each="good,iterStat:${goods}" th:id="'good'+${iterStat.count}">
+                                        <th scope="row" th:text="${iterStat.count}"></th>
+                                        <td th:text="${good.name}"></td>
+                                        <td th:text="${good.origin}"></td>
+                                        <td th:text="${good.price}"></td>
+                                        <td th:text="${good.unit}"></td>
+                                        <td>
+                                            <a class="btn btn-secondary text-white text-center" th:text="|查看/修改|"
+                                               th:onclick="fillForm([[${good}]])"
+                                               th:id="'btn-update-good'+${iterStat.count}">
+                                            </a>
+                                            <a class="btn btn-danger text-white text-center" th:text="删除"
+                                               th:onclick="deleteGood([[${good.id}]])">
+                                            </a>
+                                        </td>
+                                    </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <footer class="main-footer">
+        <th:block th:include="include ::footer"/>
+    </footer>
+</div>
+<th:block th:include="include::scripts"/>
+<script>
+    Good.init();
+
+    function deleteGood(id) {
+        Good.deleteGood(id);
+    }
+
+    function switchFrame(index) {
+        Good.switchFrame(index);
+    }
+
+    function fillForm(good) {
+        Good.showUpdateForm();
+        Good.fillInForm(good);
+    }
+
+
+</script>
+</body>
+</html>
